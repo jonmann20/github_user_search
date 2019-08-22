@@ -7,8 +7,11 @@
 			display: flex;
 			flex-flow: column;
 			align-items: center;
-			justify-content: center;
 			margin-top: 30px;
+		}
+
+		ul {
+			padding: 0;
 		}
 
 		li {
@@ -17,7 +20,8 @@
 			list-style: none;
 			background: #ddd;
 			border-radius: 2px;
-			padding: 10px;
+			padding: 5px;
+			margin-bottom: 5px;
 		}
 
 		li > * {
@@ -30,14 +34,16 @@
 	</style>
 </head>
 <body>
-	<section>
-		<input placeholder="Search GitHub" value="jonmann20" autofocus>&nbsp;
-		<button onclick="onClick()">Search</button>
-	</section>
-	<section>
-		<ul></ul>
-		<div id="count"></div>
-	</section>
+	<main>
+		<section>
+			<input placeholder="Search GitHub" value="jonmann20" autofocus>&nbsp;
+			<button onclick="onClick()">Search</button>
+		</section>
+		<section>
+			<ul></ul>
+			<div id="count"></div>
+		</section>
+	</main>
 
 	<script src="app.js"></script>
 </body>

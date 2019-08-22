@@ -43,14 +43,15 @@ async function onClick() {
 			// description
 			// star/follower count
 
-			let a = document.createElement('a');
-			a.href = item.html_url;
-			a.textContent = item.login;
-			li.appendChild(a);
-
 			let span = document.createElement('span');
 			span.textContent = user.name;
 			li.appendChild(span);
+
+			let a = document.createElement('a');
+			a.style = 'display: block;';
+			a.href = item.html_url;
+			a.textContent = item.login;
+			span.appendChild(a);
 
 
 			ul.appendChild(li)
