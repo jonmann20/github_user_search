@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This Dot Screener Test</title>
+	<style>
+		body {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 30px;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			list-style: none;
+			background: #ddd;
+			border-radius: 2px;
+			padding: 10px;
+		}
+
+		li > * {
+			margin-right: 10px;
+		}
+
+		a {
+			vertical-align: top;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<input placeholder="Search GitHub" value="jonmann20" autofocus>&nbsp;
+		<button onclick="onClick()">Search</button>
+	</section>
+	<section>
+		<ul></ul>
+		<div id="count"></div>
+	</section>
+
+	<script src="app.js"></script>
+</body>
+</html>
