@@ -34,7 +34,6 @@ function renderItems() {
 
 	// Update list
 	allItems.slice(start, end).forEach(async item => {
-		console.log(item);
 		let userResponse = await fetch(item.url);
 		let user = {};
 
