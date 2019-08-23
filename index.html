@@ -6,7 +6,6 @@
 		body {
 			display: flex;
 			flex-flow: column;
-			align-items: center;
 			margin-top: 30px;
 		}
 
@@ -16,12 +15,13 @@
 
 		li {
 			display: flex;
-			align-items: center;
+			max-width: 350px;
 			list-style: none;
+			align-items: center;
 			background: #ddd;
 			border-radius: 2px;
-			padding: 3px;
-			margin-bottom: 4px;
+			padding: 5px;
+			margin-bottom: 5px;
 		}
 
 		li > * {
@@ -41,10 +41,13 @@
 	<main>
 		<section>
 			<input placeholder="Search GitHub" value="jonmann20" autofocus>&nbsp;
-			<button onclick="onClick()">Search</button>
+			<button onclick="search()">Search</button>
 		</section>
 		<section>
+			<br>
 			<div id="count"></div>
+			<button onclick="previous()">Previous</button>
+			<button onclick="next()">Next</button>
 			<ul></ul>
 		</section>
 	</main>
