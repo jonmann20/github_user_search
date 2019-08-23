@@ -36,24 +36,28 @@ async function onClick() {
 
 			let img = document.createElement('img');
 			img.src = item.avatar_url;
-			img.width = 60;
-			img.height = 60;
+			img.width = 64;
+			img.height = 64;
 			li.appendChild(img);
 
-			// description
-			// star/follower count
-
-			let span = document.createElement('span');
-			span.textContent = user.name;
-			li.appendChild(span);
+			let div = document.createElement('div');
+			div.textContent = user.name;
 
 			let a = document.createElement('a');
 			a.style = 'display: block;';
 			a.href = item.html_url;
 			a.textContent = item.login;
-			span.appendChild(a);
+			div.appendChild(a);
 
+			let p = document.createElement('p');
+			p.textContent = user.bio;
+			div.appendChild(p);
 
+			let p2 = document.createElement('p');
+			p2.textContent = `Followers: ${user.followers}`;
+			div.appendChild(p2);
+
+			li.appendChild(div);
 			ul.appendChild(li)
 		});
 	}
